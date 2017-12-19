@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x_16"
+    android:paddingRight="@dimen/x_16"
+    android:paddingTop="@dimen/x_25"
+    tools:context="com.yeying.aimi.mode.login.PerfectDataActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgbtn_back"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_centerVertical="true"
+            android:background="@color/black"
+            android:src="@drawable/back"/>
+
+        <TextView
+
+            style="@style/outBar_SubText_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/data_title"
+            android:textSize="@dimen/sp_18"/>
+    </RelativeLayout>
+
+    <com.yeying.aimi.views.RoundImageView
+        android:id="@+id/img_head"
+        android:layout_width="@dimen/x_100"
+        android:layout_height="@dimen/x_100"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x_45"
+        android:src="@drawable/default_icon"
+        app:type="circle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x_50"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/ed_nickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/ed_nickname"
+            android:inputType="text"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:padding="@dimen/x_10"
+            android:textColor="@color/white"
+            android:textColorHint="@color/content_text"
+            android:textCursorDrawable="@color/content_text"
+            android:textSize="@dimen/sp_15"/>
+
+        <TextView
+            android:id="@+id/tv_nums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x_10"
+            android:text="12"
+            android:textColor="@color/content_text"
+            android:textSize="@dimen/sp_15"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_1"
+        android:layout_marginBottom="@dimen/x_15"
+        android:layout_marginTop="@dimen/x_10"
+        android:background="@color/content_text"/>
+
+    <TextView
+        android:id="@+id/tv_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/right"
+        android:padding="@dimen/x_10"
+        android:text="@string/ed_birth"
+        android:textColor="@color/content_text"
+        android:textSize="@dimen/sp_15"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_1"
+        android:layout_marginBottom="@dimen/x_15"
+        android:background="@color/content_text"/>
+
+    <TextView
+        android:id="@+id/tv_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/right"
+        android:padding="@dimen/x_10"
+        android:text="@string/ed_sex"
+        android:textColor="@color/content_text"
+        android:textSize="@dimen/sp_15"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_1"
+        android:layout_marginBottom="@dimen/x_15"
+        android:background="@color/content_text"/>
+
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x_30"
+        android:layout_marginRight="@dimen/x_30"
+        android:layout_marginTop="@dimen/x_30"
+        android:background="@drawable/round_yellow"
+        android:text="@string/join"
+        android:textSize="@dimen/sp_18"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

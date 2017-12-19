@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:orientation="vertical"
+             android:background="@color/black"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/fans_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yeying.aimi.views.RefreshHeaderView
+            android:id="@id/swipe_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.yeying.aimi.views.LoadMoreFooterView
+            android:id="@id/swipe_load_more_footer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/fans_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fans_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/nodata"/>
+
+        <TextView
+            android:layout_below="@id/fans_img"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="16sp"
+            android:text="空空如也~"
+            android:textColor="@color/grey"
+            />
+    </RelativeLayout>
+</FrameLayout>

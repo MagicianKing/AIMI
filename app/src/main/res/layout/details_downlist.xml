@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="@dimen/x_93"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@drawable/round_blok">
+
+    <LinearLayout
+        android:id="@+id/ram_delete"
+        android:layout_width="@dimen/x_93"
+        android:layout_height="@dimen/x_50"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/x_15"
+            android:layout_height="@dimen/x_14"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x_8"
+            android:src="@drawable/delete"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x_12"
+            android:layout_marginRight="@dimen/x_23"
+            android:text="删除"
+            android:textColor="@color/write"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ram_report"
+        android:layout_width="@dimen/x_93"
+        android:layout_height="@dimen/x_50"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/x_15"
+            android:layout_height="@dimen/x_14"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x_8"
+            android:src="@drawable/jubao"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x_12"
+            android:layout_marginRight="@dimen/x_23"
+            android:text="举报"
+            android:textColor="@color/write"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ram_lahei"
+        android:layout_width="@dimen/x_93"
+        android:layout_height="@dimen/x_50"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginLeft="@dimen/x_5"
+            android:layout_marginRight="@dimen/x_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/x_15"
+                android:layout_height="@dimen/x_14"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x_8"
+                android:src="@drawable/lahei"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x_12"
+                android:layout_marginRight="@dimen/x_23"
+                android:text="拉黑"
+                android:textColor="@color/write"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/ram_money"
+        android:layout_width="@dimen/x_93"
+        android:layout_height="@dimen/x_50"
+        android:text="我的余额"
+        android:textColor="@color/whit"
+        android:gravity="center"/>
+
+</LinearLayout>

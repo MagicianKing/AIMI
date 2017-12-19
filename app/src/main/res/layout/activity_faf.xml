@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/black"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="@dimen/x_25"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/x_75"
+        android:paddingBottom="10dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/faf_back"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:paddingLeft="5dp"
+            android:src="@drawable/back"
+            android:background="@color/black"
+            android:layout_gravity="center_vertical"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/faf_fans"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:text="粉丝"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/faf_line_left"
+                    android:layout_width="@dimen/x_90"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/line_yellow"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/faf_follow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:text="关注"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/faf_line_right"
+                    android:layout_width="@dimen/x_90"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/line_black"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/faf_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

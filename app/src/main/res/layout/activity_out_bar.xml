@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top_bar"
+    tools:context="com.yeying.aimi.mode.bar_info.OutBarActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x_20">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/x_20"
+                android:layout_marginLeft="@dimen/x_16"
+                android:background="@drawable/location_bg"
+                android:drawableLeft="@drawable/locationtag"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x_16"
+                android:textColor="@color/yellow_light"/>
+
+            <View
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_5"
+                android:background="@color/black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/x_25">
+
+                <ImageView
+                    android:id="@+id/title_back"
+                    style="@style/back_style"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back"/>
+
+                <ImageView
+                    android:id="@+id/title_menu"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x_10"
+                    android:background="@drawable/menu"/>
+
+                <TextView
+                    android:id="@+id/title_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18"/>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:id="@+id/layout_nightcats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/outBar_SubText_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/indicator"
+                android:text="@string/nightcat"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec_personlist"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_5"
+                android:background="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_phone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/outBar_SubText_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/phonetag"
+                    android:gravity="center"
+                    android:text="@string/phone"/>
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    style="@style/outBar_SubText_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x_16"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_below="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_5"
+                android:background="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_address"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/outBar_SubText_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/location_white"
+                android:gravity="center_vertical"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_5"
+                android:background="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_dynamic"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_dymaictitle"
+                style="@style/outBar_SubText_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/indicator"
+                android:text="@string/dynamic"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dynamic_list"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_5"
+                android:background="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_actives"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x_25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/x_10"
+                    android:layout_marginLeft="@dimen/x_16"
+                    android:layout_marginTop="@dimen/x_10"
+                    android:src="@drawable/active_tag"/>
+
+                <TextView
+                    android:text="该酒吧暂无活动"
+                    android:id="@+id/tv_activetitle"
+                    style="@style/outBar_SubText_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x_16"
+                android:layout_marginRight="@dimen/x_16"
+                android:background="@color/grey_line"/>
+
+            <TextView
+                android:id="@+id/tv_dis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x_10"
+                android:paddingLeft="@dimen/x_16"
+                android:paddingRight="@dimen/x_16"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

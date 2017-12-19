@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/black"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_25"/>
+
+    <include layout="@layout/appbar_layout"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_55"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="手机号"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"/>
+
+            <EditText
+                android:id="@+id/bindphone_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:maxLength="11"
+                android:paddingLeft="@dimen/x_10"
+                android:hint="请输入要绑定的手机号码"
+                android:textSize="@dimen/sp_15"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/x_10"
+            android:background="#E9E9E9"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_55"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            >
+
+            <TextView
+                android:id="@+id/code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="验证码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                />
+
+            <EditText
+                android:id="@+id/bindphone_sms"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/code"
+                android:background="@null"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:paddingLeft="@dimen/x_10"
+                android:hint="输入验证码"
+                android:textSize="@dimen/sp_16"/>
+
+            <Button
+                android:id="@+id/bindphone_ym"
+                android:layout_width="@dimen/x_102"
+                android:layout_height="@dimen/x_37"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_gray_disable"
+                android:text="获取验证码"
+                android:textColor="@color/blok"
+                android:textSize="@dimen/sp_15"/>
+
+            <TextView
+                android:id="@+id/bindphone_time"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_border"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#4D3D1B"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/bindphone_cx"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_border"
+                android:gravity="center"
+                android:text="重新获取"
+                android:textColor="#4D3D1B"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginRight="@dimen/x_10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:background="#E9E9E9"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_55"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="密码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"/>
+
+            <EditText
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:id="@+id/bindphone_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:paddingLeft="@dimen/x_20"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:hint="请输入不少于6位密码"
+                android:textSize="@dimen/sp_16"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginRight="@dimen/x_10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:background="#E9E9E9"/>
+    </RelativeLayout>
+
+    <TextView
+        android:background="@drawable/grey_round_bg"
+        android:id="@+id/bindphone_next"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x_100"
+        android:text="立即绑定"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15"/>
+</LinearLayout>

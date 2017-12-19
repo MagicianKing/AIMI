@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingTop="13dp">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textColor="#737373"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity">
+
+
+        <TextView
+            android:id="@+id/left_view"
+            android:layout_width="48dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"/>
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/iv_userhead"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:focusable="false"
+            />
+
+        <TextView
+            android:id="@+id/img_name"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#ff99cc"/>
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/img_name"
+            android:id="@+id/row_pic"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:background="@drawable/baping_edit"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_sendPicture"
+                android:layout_width="205dp"
+                android:layout_height="131dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:layout_below="@id/iv_sendPicture"
+                android:id="@+id/iv_sendMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="3dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:text="what"/>
+
+            <ImageView
+                android:id="@+id/iv_sendBP_flag"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baping_flag"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="-35dp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="215dp"
+            android:layout_height="35dp"
+            android:layout_alignRight="@+id/row_pic"
+            android:layout_below="@+id/row_pic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/botton_5"
+            android:background="@drawable/yellow_button"
+            android:text="删除"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/row_pic"
+            android:gravity="center_horizontal"
+
+            android:orientation="vertical"
+
+            >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:background="@null"
+                android:textColor="@color/white"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/msg_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/row_pic"
+            android:clickable="true"
+            android:src="@drawable/msg_state_failed_resend"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/center_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/row_pic"
+            android:layout_marginTop="30dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_userid"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/iv_userhead"
+            android:layout_marginLeft="12dp"
+            android:layout_toLeftOf="@id/row_pic"/>
+    </RelativeLayout>
+
+</LinearLayout>

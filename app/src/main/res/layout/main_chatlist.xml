@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/chatlist"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/chat_list_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="69dp">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"/>
+
+        <FrameLayout
+            android:id="@+id/chat_list_frment"
+            android:layout_width="match_parent"
+            android:layout_height="69dp">
+
+            <RelativeLayout
+                android:id="@+id/chat_list_smalllayout"
+                android:layout_width="match_parent"
+                android:layout_height="69dp">
+
+                <com.yeying.aimi.views.RoundImageView
+                    android:id="@+id/chat_headimage"
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    app:type="circle"/>
+
+                <LinearLayout
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/chat_headimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chat_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="name"
+                        android:layout_marginRight="20dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"/>
+
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/chat_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017-9-19"
+                        android:textColor="@color/chat_time"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/chat_headimage"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/chat_say"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxEms="16"
+                    android:singleLine="true"
+                    android:text="what"
+                    android:textColor="@color/ser_btm"
+                    android:textSize="12dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/chat_news"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="-18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/chat_headimage"
+                    android:background="@drawable/xx_dt_red"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/chat_newsnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

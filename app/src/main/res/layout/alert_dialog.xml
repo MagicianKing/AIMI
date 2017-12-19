@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/round_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="264dp"
+            android:layout_height="105dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="@string/re_message"
+                android:textColor="@color/msg_black"
+                android:textSize="18dp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/alert_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="#333"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+                android:textColor="#444"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/grey"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="131dp"
+                android:layout_height="50.5dp"
+                android:onClick="cancel"
+                android:text="@string/back"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/grey"/>
+
+            <Button
+                android:id="@+id/bt_todo"
+                android:layout_width="131dp"
+                android:layout_height="50.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="1dp"
+                android:onClick="ok"
+                android:background="@null"
+                android:text="@string/sure_re_message"
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

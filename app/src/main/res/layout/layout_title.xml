@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/black"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/title_back"
+            style="@style/back_style"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/back"/>
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/title_menu"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x_15"
+            android:layout_marginRight="@dimen/x_10"
+            android:background="@drawable/menu"/>
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:maxWidth="220dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x_12"
+            android:text="test"/>
+    </RelativeLayout>
+</LinearLayout>

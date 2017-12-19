@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+    <style name="StarTheme" parent="AppTheme">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@drawable/start</item>
+    </style>
+
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mRl_card"
+                android:background="#000"
+    >
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <!--<TextView
+            android:id="@+id/mTv_card"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="有缘遇见TA!快去缘分牌入口查看吧！"/>
+        <Button
+            android:id="@+id/mBtn_card"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="确定"
+            android:background="@drawable/grey_round_bg"
+            android:textSize="12sp"/>-->
+        <TextView
+            android:id="@+id/mTv_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:background="@drawable/top_round"
+            android:gravity="center"
+            android:text="有缘遇见TA!快去缘分牌入口查看吧！"
+            android:textSize="14sp"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/mBtn_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:background="@drawable/bottom_round"
+            android:text="确定"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

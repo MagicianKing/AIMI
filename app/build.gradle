@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+
+android {
+    //签名配置
+    signingConfigs {
+        /*debug {
+            keyAlias 'aimi'
+            keyPassword 'password'
+            storeFile file('sign_keystore_aimi.jks')
+            storePassword 'password'
+        }*/
+        relase {
+            keyAlias 'aimi'
+            keyPassword 'password'
+            storeFile file('sign_keystore_aimi.jks')
+            storePassword 'password'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+    defaultConfig {
+        applicationId "com.yeying.aimi"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            //是否开启 log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            //请求头 aimi47.94.164.180  miw47.93.35.238
+            buildConfigField "String", "BASE_URL", "\"http://47.94.164.180:10031\""
+            //混淆
+            minifyEnabled false
+            //移除无用的资源文件
+            shrinkResources false
+            //proguard-rules.pro 混淆文件配置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.debug
+            manifestPlaceholders = [HUANXIN_APP_KEY: "hxjg1999#aimi",UMENG_APP_KEY: "59f93cbaa40fa36947000049",BAIDU_LOCATION:"BPpLZlpMzQz4evY99ZP8I7fKIYRZBlNm"]
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "String", "BASE_URL", "\"http://39.106.42.245:10031\""
+            minifyEnabled false
+            //移除无用的资源文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.relase
+            manifestPlaceholders = [HUANXIN_APP_KEY: "hxjg1999#aimipro",UMENG_APP_KEY: "59f93cbaa40fa36947000049",BAIDU_LOCATION:"BPpLZlpMzQz4evY99ZP8I7fKIYRZBlNm"]
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/sun.misc.BASE64Decoder.jar')
+    //图片选择
+    //刷新加载
+    //    弹幕相关
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/easemobchat_2.3.4.jar')
+    compile files('libs/libammsdk.jar')
+    compile 'com.alibaba:fastjson:1.2.38'
+    compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
+    compile 'com.github.ctiao:DanmakuFlameMaster:0.9.12'
+    compile 'com.github.ctiao:ndkbitmap-armv7a:0.9.12'
+    compile 'com.github.ctiao:ndkbitmap-armv5:0.9.12'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    compile 'org.litepal.android:core:1.6.0'
+    testCompile 'junit:junit:4.12'
+    //debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    //releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    compile 'com.android.support:recyclerview-v7:25+'
+    compile 'com.android.support:appcompat-v7:25+'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
+    compile project(':SwipeBackLibrary')
+    //友盟
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/open_sdk_r5788_lite.jar')
+    compile files('libs/SocialSDK_QQ_Full.jar')
+    compile files('libs/weiboSDKCore.jar')
+}

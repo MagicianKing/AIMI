@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/imgbtn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x_16"
+        android:src="@drawable/new_cancel"/>
+
+    <LinearLayout
+        android:id="@+id/layout_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgbtn_cancel"
+        android:background="@drawable/bp_money_bg1"
+        android:orientation="vertical"
+        android:padding="@dimen/x_16">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="发现新版本"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x_10"
+            android:layout_marginLeft="@dimen/x_10"
+            android:layout_marginTop="@dimen/x_40"
+            android:text="最新版本:"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x_10"
+            android:text="新版本大小:"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_trait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x_10"
+            android:text="新版本特性:"
+            android:textColor="@color/black"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x_8"
+            android:scrollbars="none">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/x_8"
+                android:minLines="5"
+                android:textColor="@color/black"/>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x_16"
+            android:background="@drawable/round_white"
+            android:text="立刻更新"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/layout_update"
+        android:layout_alignTop="@+id/layout_update"
+        android:src="@drawable/new_flag"/>
+</RelativeLayout>

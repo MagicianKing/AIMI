@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/top_bar"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:paddingTop="@dimen/x_25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/chat_img"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/x_5"
+            android:layout_marginTop="@dimen/x_5"
+            android:layout_width="@dimen/x_60"
+            android:layout_height="@dimen/x_30"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/aimi_logo"/>
+
+        <ImageView
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/chat_back"
+            android:layout_marginBottom="@dimen/x_15"
+            android:layout_marginTop="@dimen/x_15"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/chat_title"
+            android:layout_marginBottom="@dimen/x_5"
+            android:layout_marginTop="@dimen/x_15"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chat_inform"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_60"
+        android:layout_below="@+id/chat_toprelayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/border"/>
+
+        <com.yeying.aimi.views.RoundImageView
+            android:id="@+id/chat_hea"
+            android:layout_width="@dimen/x_45"
+            android:layout_height="@dimen/x_45"
+            app:type="circle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/tongzhi"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/chat_hea"
+            android:text="通知"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/right_white"/>
+
+        <RelativeLayout
+            android:id="@+id/chat_num_news"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="-15dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/chat_hea"
+            android:background="@drawable/xx_dt_red"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/chat_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="0"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="12dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chat_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></RelativeLayout>
+    </RelativeLayout>
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yeying.aimi.views.RefreshHeaderView
+            android:id="@id/swipe_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.yeying.aimi.views.LoadMoreFooterView
+            android:id="@id/swipe_load_more_footer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+</LinearLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:background="#e0000000"
+                android:id="@+id/hongbao_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingRight="@dimen/x_20"
+            android:paddingLeft="@dimen/x_20"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/x_20"
+            android:orientation="vertical"
+            android:background="@drawable/pop_baping_bg"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="发红包"/>
+
+                <ImageButton
+                    android:id="@+id/hongbao_close"
+                    android:layout_width="@dimen/x_20"
+                    android:layout_height="@dimen/x_20"
+                    android:background="@drawable/close"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/x_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/common"
+                android:text="总金额 （1 - 2000猫币）"
+                />
+
+            <LinearLayout
+                android:paddingLeft="6dp"
+                android:paddingRight="@dimen/x_10"
+                android:layout_marginTop="@dimen/x_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hongbao_edit_bg"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:maxLength="4"
+                    android:inputType="numberSigned"
+                    android:id="@+id/hongbao_money"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:textSize="@dimen/sp_15"
+                    android:textColorHint="@color/grey_text"
+                    android:hint="每人抽到的金额随机"
+                    android:layout_weight="9"
+                    android:textColor="@color/black"
+                    android:background="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="猫币"
+                    android:textColor="@color/common"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/x_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/common"
+                android:text="红包个数 （1 - 100）个"
+                />
+
+            <LinearLayout
+                android:paddingLeft="6dp"
+                android:paddingRight="@dimen/x_10"
+                android:layout_marginTop="@dimen/x_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hongbao_edit_bg"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:maxLength="3"
+                    android:inputType="numberSigned"
+                    android:id="@+id/hongbao_nums"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:textSize="@dimen/sp_15"
+                    android:textColorHint="@color/grey_text"
+                    android:hint="红包个数需小于红包总金额"
+                    android:layout_weight="9"
+                    android:textColor="@color/black"
+                    android:background="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个"
+                    android:textColor="@color/common"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/x_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/common"
+                android:text="留言"
+                />
+
+            <LinearLayout
+                android:paddingLeft="6dp"
+                android:paddingRight="@dimen/x_10"
+                android:layout_marginTop="@dimen/x_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hongbao_edit_bg"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/hongbao_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:textSize="@dimen/sp_15"
+                    android:textColorHint="@color/grey_text"
+                    android:hint="恭喜发财"
+                    android:layout_weight="9"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:paddingTop="5dp"
+                android:paddingBottom="@dimen/x_10"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:id="@+id/hongbao_needmonty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/hall_top_bg"
+                    android:text="支付：0猫币"/>
+
+                <TextView
+                    android:id="@+id/hongbao_mymoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/font_text_gray"
+                    android:layout_alignParentBottom="true"
+                    android:text="账户余额：0猫币"/>
+
+                <TextView
+                    android:id="@+id/hongbao_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/yellow_light"
+                    android:text="充值"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/hongbao_mymoney"/>
+
+                <Button
+                    android:id="@+id/hongbao_send"
+                    android:layout_width="70dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/grey_round_bg"
+                    android:text="发送"
+                    android:textColor="@color/hall_top_bg"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

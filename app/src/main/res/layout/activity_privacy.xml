@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.yeying.aimi.mode.person.PrivacyActivity">
+
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/layout_titlestyle_1"/>
+
+    <LinearLayout
+        android:background="@color/set_item"
+        android:layout_below="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/Set_item_Style"
+            android:text="@string/showfoot"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <ToggleButton
+            android:layout_marginRight="@dimen/x_16"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:id="@+id/ck_show"
+            android:background="@drawable/selector_switch"
+            android:layout_width="@dimen/x_60"
+            android:layout_height="@dimen/x_30"/>
+    </LinearLayout>
+
+</RelativeLayout>

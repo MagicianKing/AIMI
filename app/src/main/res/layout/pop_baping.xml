@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:background="#e0000000"
+                android:id="@+id/baping_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:paddingRight="@dimen/x_20"
+            android:paddingLeft="@dimen/x_20"
+            android:paddingTop="@dimen/x_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/pop_baping_bg"
+            >
+
+            <RelativeLayout
+                android:id="@+id/baping_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="霸屏"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <ImageButton
+                    android:id="@+id/pop_bp_close"
+                    android:layout_width="@dimen/x_20"
+                    android:layout_height="@dimen/x_20"
+                    android:background="@drawable/close"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/baping_center"
+                android:layout_below="@id/baping_top"
+                android:layout_marginTop="@dimen/x_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="霸屏时长"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/content_text"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@id/baping_center"
+                android:id="@+id/pop_bp_recycler"
+                android:layout_marginTop="@dimen/x_10"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/x_15"
+                android:id="@+id/baping_bottom"
+                android:layout_below="@id/pop_bp_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="104dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:background="@drawable/pop_baping"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:maxLength="30"
+                        android:id="@+id/pop_bp_content"
+                        android:padding="8dp"
+                        android:layout_width="233dp"
+                        android:layout_height="match_parent"
+                        android:hint="请不要发布违规、涉黄等内容、霸屏不支持退款"
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="@color/content_text"
+                        android:textColorHint="@color/content_text"
+                        android:gravity="top"
+                        android:background="@null"/>
+
+                    <TextView
+                        android:id="@+id/pop_bp_tvnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30"
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="@color/content_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"/>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/pop_bp_photo"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/pop_baping"
+                    >
+
+                    <ImageView
+                        android:id="@+id/pop_bp_img_bg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/camera"/>
+
+                    <com.yeying.aimi.views.RoundImageView
+                        android:visibility="gone"
+                        android:layout_margin="3dp"
+                        android:id="@+id/pop_bp_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:type="round"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/camera"
+                        app:borderRadius="5dp"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/x_15"
+                android:layout_below="@id/baping_bottom"
+                android:paddingBottom="@dimen/x_10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_60">
+
+                <TextView
+                    android:id="@+id/pop_bp_needmonty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/black_25"
+                    android:text="支付：0猫币"/>
+
+                <TextView
+                    android:id="@+id/pop_bp_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/content_text"
+                    android:layout_alignParentBottom="true"
+                    android:text="账户余额：0猫币"/>
+
+                <TextView
+                    android:id="@+id/pop_bp_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/yellow_light"
+                    android:text="充值"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/pop_bp_money"/>
+
+                <Button
+                    android:id="@+id/pop_bp_send"
+                    android:layout_width="70dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/round_yellow"
+                    android:text="发送"
+                    android:textColor="@color/hall_top_bg"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

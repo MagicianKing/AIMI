@@ -1,0 +1,1 @@
+package com.yeying.aimi.protoco;import com.yeying.aimi.protoco.path.Result;import com.yeying.aimi.protocol.request.Arg;public interface IProtocol {     String uri();     Arg[] serialize();     void unSerialize(Result result);}

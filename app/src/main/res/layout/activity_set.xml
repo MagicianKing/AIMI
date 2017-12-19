@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context="com.yeying.aimi.mode.person.SetActivity">
+
+    <include
+        layout="@layout/layout_titlestyle_1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set_item"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_numandsafe"
+            style="@style/Set_item_Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/right_white"
+            android:text="@string/self"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x_1"
+            android:layout_marginLeft="@dimen/x_16"
+            android:layout_marginRight="@dimen/x_16"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_privacy"
+            style="@style/Set_item_Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/right_white"
+            android:text="@string/privacy"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_16"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set_item">
+
+        <TextView
+            android:layout_centerVertical="true"
+            style="@style/Set_item_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clearcache"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_cachesize"
+            style="@style/Set_item_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/right_white"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set_item"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            style="@style/Set_item_Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/right_white"
+            android:text="@string/feedback"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x_1"
+            android:layout_marginLeft="@dimen/x_16"
+            android:layout_marginRight="@dimen/x_16"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_aboutme"
+            style="@style/Set_item_Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/right_white"
+            android:text="@string/aboutme"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/x_45"
+        android:layout_marginRight="@dimen/x_45"
+        android:layout_marginTop="@dimen/x_50"
+        android:background="@drawable/yellow_button"
+        android:text="@string/exit"
+        android:textSize="@dimen/sp_18"/>
+
+</LinearLayout>

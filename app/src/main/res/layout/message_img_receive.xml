@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <com.yeying.aimi.views.RoundImageView
+        android:id="@+id/img_receive_head"
+        android:layout_alignParentLeft="true"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        app:type="circle"
+        />
+
+    <TextView
+        android:layout_marginLeft="@dimen/x_10"
+        android:layout_marginTop="5dp"
+        android:id="@+id/img_receive_name"
+        android:layout_toRightOf="@id/img_receive_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/chat_girl_color"
+        android:text="名字"
+        android:textSize="12sp"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/x_10"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/img_receive_name"
+        android:layout_toRightOf="@id/img_receive_head"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:id="@+id/img_send_linear"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/baping_edit">
+
+            <ImageView
+                android:id="@+id/img_receive_img"
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/img_receive_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/img_receive_status"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/x_20"
+            android:layout_height="@dimen/x_20"
+            android:layout_toLeftOf="@id/img_send_linear"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</RelativeLayout>

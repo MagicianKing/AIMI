@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/x_10"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <com.yeying.aimi.views.RoundImageView
+        android:visibility="visible"
+        android:id="@+id/txt_send_head"
+        android:layout_alignParentRight="true"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_centerVertical="true"
+        app:type="circle"/>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/x_10"
+        android:layout_marginTop="5dp"
+        android:id="@+id/txt_send_name"
+        android:layout_toLeftOf="@id/txt_send_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/chat_girl_color"
+        android:text="名字"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/x_10"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/txt_send_name"
+        android:layout_toLeftOf="@id/txt_send_head">
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/txt_send_status"
+            android:layout_width="@dimen/x_20"
+            android:layout_height="@dimen/x_20"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/text_send_status_tv"
+            android:layout_width="@dimen/x_20"
+            android:layout_height="@dimen/x_20"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:background="@drawable/msg_state_failed_resend"/>
+
+        <TextView
+            android:visibility="gone"
+            android:padding="@dimen/x_10"
+            android:id="@+id/txt_send_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/white"
+            android:background="@drawable/baping_edit"
+            android:text="难道你是方法"/>
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/back_message"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_message_bg"
+        android:text="撤回消息"
+        android:textColor="@color/whit"
+        android:textSize="12sp"
+        android:paddingRight="@dimen/x_10"
+        android:paddingLeft="@dimen/x_10"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        />
+</RelativeLayout>

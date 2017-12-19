@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/hall_top_bg"
+              android:clipToPadding="true"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/black"/>
+
+    <include
+        layout="@layout/appbar_layout"/>
+
+    <EditText
+        android:id="@+id/et_fankui"
+        android:layout_width="match_parent"
+        android:layout_height="214dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="请将意见和建议告诉我们"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint_grey"
+        android:textSize="14dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/hall_yellow_dark"/>
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:hint="手机/邮箱"
+            android:textColor="@color/white"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/hall_yellow_dark"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_grey"/>
+    </RelativeLayout>
+
+    <Button
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginTop="94dp"
+        android:background="@drawable/round_yellow"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:layout_below="@+id/rl_phone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+</LinearLayout>

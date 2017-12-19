@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/top_bar"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:visibility="gone"
+                android:maxLines="1"
+                android:gravity="center"
+                android:textColor="@color/font_text_gray"
+                android:id="@+id/tv_rechargelim"
+                android:layout_margin="@dimen/x_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/recharge_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="我的余额：0猫币"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="21dp"
+                android:text="选择金额"
+                android:textColor="@color/grey"
+                android:textSize="15sp"/>
+
+
+            <com.yeying.aimi.views.MeasuredGrideView
+                android:id="@+id/recharge_money_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:horizontalSpacing="15dp"
+                android:listSelector="@drawable/sekuai0"
+                android:numColumns="3"
+                android:verticalSpacing="15dp"></com.yeying.aimi.views.MeasuredGrideView>
+
+            <TextView
+                android:id="@+id/recharge_should"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:text="应付：0元"/>
+
+            <Button
+                android:id="@+id/recharge_recharge_btn"
+                android:layout_width="255dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/yanzhengma"
+                android:text="支付"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_marginTop="39dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择支付方式"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/x_10"
+                android:textSize="@dimen/sp_18"/>
+
+            <RelativeLayout
+                android:background="@color/pay_color"
+                android:id="@+id/wallet_wechat"
+                android:layout_marginTop="@dimen/x_10"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:paddingLeft="@dimen/x_20"
+                android:paddingRight="@dimen/x_20">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_18"
+                    android:text="微信"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/paytype_wechat"
+                    android:drawablePadding="@dimen/x_10"
+                    />
+
+                <ImageView
+                    android:id="@+id/wallet_wechat_select"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/paytype_select"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wallet_ali"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:paddingLeft="@dimen/x_20"
+                android:paddingRight="@dimen/x_20">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_18"
+                    android:text="支付宝"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/paytype_ali"
+                    android:drawablePadding="@dimen/x_10"
+                    />
+
+                <ImageView
+                    android:id="@+id/wallet_ali_select"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/paytype_unselect"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/x_30"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/sp_12"
+                android:layout_marginBottom="10dp"
+                android:text="充值完成后，到账可能有一定延迟，请耐心等待"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

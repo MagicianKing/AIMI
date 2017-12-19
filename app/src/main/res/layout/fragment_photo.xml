@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:orientation="vertical"
+             android:padding="15dp"
+             android:background="#1b1b1b"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:focusable="false"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:id="@+id/photo_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/photo_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/fans_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/nodata"/>
+
+        <TextView
+            android:layout_below="@id/fans_img"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="16sp"
+            android:text="空空如也~"
+            android:textColor="@color/grey"
+            />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.yeying.aimi.views.RoundImageView
+        android:id="@+id/img_head"
+        android:layout_width="@dimen/x_60"
+        android:layout_height="@dimen/x_60"
+        android:src="@drawable/default_icon"
+        app:type="circle"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_head"
+        android:layout_marginLeft="@dimen/x_10"
+        android:layout_marginTop="@dimen/x_10"
+        android:layout_toRightOf="@+id/img_head"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="@dimen/x_10"
+        android:background="@drawable/baping_edit"
+        android:padding="@dimen/x_10">
+
+        <com.yeying.aimi.views.RoundImageView
+            android:id="@+id/img_barscreen"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:src="@drawable/default_icon"
+            app:borderRadius="@dimen/x_5"
+            app:type="round"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/img_barscreen"
+            android:layout_marginRight="-35dp"
+            android:layout_marginTop="-35dp"
+            android:src="@drawable/baping_flag"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_barscreen"
+            android:layout_marginTop="@dimen/x_5"
+            android:maxLength="20"
+            android:maxLines="2"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x_35"
+            android:layout_alignLeft="@+id/img_barscreen"
+            android:layout_alignRight="@+id/img_barscreen"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="@dimen/x_5"
+            android:background="@drawable/buttonstyle_yelow"
+            android:text="@string/delete"/>
+    </RelativeLayout>
+</RelativeLayout>

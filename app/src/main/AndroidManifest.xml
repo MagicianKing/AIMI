@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.yeying.aimi">
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 定位权限 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <application
+        android:name=".aimibase.AIMIApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:logo="@mipmap/logo"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme,android:label,android:allowBackup,android:supportsRtl,android:logo">
+
+        <!-- 百度 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${BAIDU_LOCATION}"/>
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APP_KEY}"/>
+        <!-- 友盟渠道 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng"/>
+        <!-- 分享和授权 -->
+        <!-- 新浪 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- QQ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent100424468"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 支付宝H5界面 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+        <service
+            android:name=".service.PostionService"
+            android:enabled="true"/>
+        <!-- 环信 KEY -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="${HUANXIN_APP_KEY}"/>
+        <!-- 声明sdk所需的service SDK核心功能 -->
+        <service
+            android:name="com.easemob.chat.EMChatService"
+            android:exported="true"/>
+        <service
+            android:name="com.easemob.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.easemob.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".aimibase.BaseActivity"/>
+        <activity
+            android:name=".mode.HomeActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".mode.bar_info.Activity_BaPing"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity
+            android:name=".mode.StartActivity"
+            android:theme="@style/StartTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".mode.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".mode.dynamics_detail.DynamicsDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".mode.bar_info.BarMemberActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".mode.login.NewRegisterActivity"/>
+        <activity android:name=".mode.login.NewForgetActivity"/>
+        <activity android:name=".mode.bar_info.OutBarActivity">
+        </activity>
+        <activity
+            android:name=".mode.bar_info.ContextMenu"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- 展示大图 -->
+        <activity
+            android:name=".huanxin.ShowBigImage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mode.login.PerfectDataActivity">
+        </activity>
+
+        <!-- 用户协议 -->
+        <activity
+            android:name=".mode.login.UserAgreementActivty"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 通知 -->
+        <activity
+            android:name=".mode.inform.InformActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 单聊 -->
+        <activity
+            android:name=".mode.signlechat.SingleChat"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 设置 -->
+        <activity
+            android:name=".mode.person.SetActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 隐私设置 -->
+        <activity
+            android:name=".mode.person.PrivacyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mode.person.PersonActivity">
+        </activity>
+        <activity android:name=".mode.person.EditDataActivity">
+        </activity>
+        <!-- 粉丝与关注 -->
+        <activity
+            android:name=".mode.mine.FollowAndFans"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 他人主页 -->
+        <activity
+            android:name=".mode.otherdetails.OtherHomepage"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <!-- 自己主页 -->
+        <activity android:name=".mode.otherdetails.MineHomepage"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+        <!-- 支付相关 -->
+        <activity
+            android:name=".mode.wallet.WalletActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mode.wallet.RechargeActivity"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:label="@string/app_name"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 展示大图 -->
+        <activity
+            android:name=".mode.otherdetails.PreViewShowActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 用户权限 -->
+        <activity
+            android:name=".mode.bar_info.PermissionActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 滤镜 -->
+        <activity
+            android:name=".mode.picture.ImageFilterActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 账户与安全 -->
+        <activity
+            android:name=".mode.person.AccountAndSafe"
+            android:screenOrientation="portrait"/>
+        <!-- 相册 -->
+        <activity
+            android:name=".mode.photopicker.AlbmActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 裁剪 -->
+        <activity
+            android:name=".mode.photopicker.CropImageActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 用户发布 -->
+        <activity
+            android:name=".mode.picture.UserFaBuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 重发消息弹框 -->
+        <activity
+            android:name=".huanxin.AlertDialog"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <!-- 他人资料 -->
+        <activity
+            android:name=".mode.otherdetails.OtherDetail"
+            android:screenOrientation="portrait"/>
+        <!-- 关于我们 -->
+        <activity
+            android:name=".mode.person.AboutUs"
+            android:screenOrientation="portrait"/>
+        <!-- 条款声明 -->
+        <activity
+            android:name=".mode.person.MianZeShengMingActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 聊天界面 -->
+        <activity
+            android:name=".mode.bar_info.ChatActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 意见反馈 -->
+        <activity
+            android:name=".mode.person.FankuiActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 引导页 -->
+        <activity
+            android:name=".mode.login.GuideActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 霸屏榜 -->
+        <activity
+            android:name=".mode.bar_info.Rank_BP"
+            android:screenOrientation="portrait"/>
+        <!-- 游戏相关 -->
+        <activity
+            android:name=".games.GameStartActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".games.ExplainActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".wxapi.WXEntryActivity"
+                  android:exported="true"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+                  android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".games.GameActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 绑定手机号 -->
+        <activity android:name=".mode.login.BindPhone"
+            android:screenOrientation="portrait"></activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.yeying.aimi.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+    </application>
+
+</manifest>

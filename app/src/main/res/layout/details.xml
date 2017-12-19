@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.yeying.aimi.views.RoundImageView
+            android:layout_marginTop="@dimen/x_10"
+            android:layout_marginBottom="@dimen/x_10"
+            android:id="@+id/details_head_xml"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="@dimen/x_10"
+            android:scaleType="centerCrop"
+            app:type="circle"
+            android:src="@drawable/default_icon"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/x_10"
+            android:paddingLeft="8dp"
+            android:paddingRight="@dimen/x_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.yeying.aimi.views.TextViewPlus_Rel
+                    android:id="@+id/details_title_xml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="用户名"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15"/>
+
+                <com.yeying.aimi.views.TextViewPlus_Rel
+                    android:id="@+id/details_date_xml"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评论时间"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <com.yeying.aimi.views.TextViewPlus
+                android:layout_alignParentBottom="true"
+                android:id="@+id/details_conten_xml"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="评论内容"
+                android:ellipsize="end"
+                android:paddingRight="@dimen/x_15"
+                android:textColor="@color/pale"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

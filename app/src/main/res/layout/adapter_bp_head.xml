@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="65dp"
+        android:layout_height="65dp">
+
+        <ImageView
+            android:id="@+id/bp_head_bg"
+            android:layout_width="match_parent"
+            android:background="@drawable/imageborder_0"
+            android:layout_height="match_parent">
+        </ImageView>
+
+        <com.yeying.aimi.views.RoundImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/default_icon"
+            android:id="@+id/bp_head"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:type="circle"
+            android:scaleType="centerCrop"
+            />
+    </RelativeLayout>
+</LinearLayout>

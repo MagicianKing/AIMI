@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/buttonstyle_yelow"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingBottom="5dp"
+              android:paddingLeft="60dp"
+              android:paddingRight="60dp"
+              android:paddingTop="5dp">
+
+    <TextView
+        android:layout_marginLeft="@dimen/x_20"
+        android:layout_marginRight="@dimen/x_20"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/toast_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="false"
+        android:textColor="@color/drink_item"
+        android:textSize="@dimen/x_15"/>
+
+</LinearLayout>

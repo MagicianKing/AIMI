@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:id="@+id/rank_background"
+              android:background="@drawable/rank_bg"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_25"
+        android:background="@color/black"/>
+
+    <include layout="@layout/appbar_layout"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/rank_tv_top"
+            android:layout_marginTop="@dimen/x_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="恭喜您"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/rank_tv_center"
+            android:layout_marginTop="@dimen/x_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获得第一名"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/rank_tv_bottom"
+            android:paddingLeft="@dimen/x_10"
+            android:paddingRight="@dimen/x_10"
+            android:layout_marginTop="@dimen/x_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="赢的猫币 已放入您的钱包"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/rank_linear_top"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:paddingBottom="13dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rank_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/rank_two_money"
+                    android:gravity="bottom"
+                    android:drawablePadding="@dimen/x_5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="180dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="0"
+                    android:drawableLeft="@drawable/money_icon"
+                    android:layout_alignParentBottom="true"
+                    />
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/rank_two_name"
+                    android:layout_above="@id/rank_two_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gender_man"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:ellipsize="end"
+                    />
+
+                <FrameLayout
+                    android:layout_marginBottom="5dp"
+                    android:layout_above="@id/rank_two_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.yeying.aimi.views.RoundImageView
+                        android:id="@+id/rank_two_head"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/default_icon"
+                        app:type="circle"
+                        android:visibility="visible"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="76dp"
+                        android:background="@drawable/rank_two_bg"/>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rank_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/rank_one_money"
+                    android:gravity="bottom"
+                    android:drawablePadding="@dimen/x_5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="180dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:drawableLeft="@drawable/money_icon"
+                    android:layout_alignParentBottom="true"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/rank_one_name"
+                    android:layout_above="@id/rank_one_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow_light"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:ellipsize="end"
+                    />
+
+                <FrameLayout
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_above="@id/rank_one_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.yeying.aimi.views.RoundImageView
+                        android:id="@+id/rank_one_head"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/default_icon"
+                        app:type="circle"
+                        android:visibility="visible"
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/rank_one_bg"/>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rank_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/rank_three_money"
+                    android:gravity="bottom"
+                    android:drawablePadding="@dimen/x_5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="180dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:drawableLeft="@drawable/money_icon"
+                    android:layout_alignParentBottom="true"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/rank_three_name"
+                    android:layout_above="@id/rank_three_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#f1825c"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:ellipsize="end"
+                    />
+
+                <FrameLayout
+                    android:layout_marginBottom="5dp"
+                    android:layout_above="@id/rank_three_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.yeying.aimi.views.RoundImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/default_icon"
+                        app:type="circle"
+                        android:id="@+id/rank_three_head"
+                        android:visibility="visible"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="76dp"
+                        android:background="@drawable/rank_three_bg"/>
+
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rank_list"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

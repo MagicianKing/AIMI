@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/phone_window_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/around_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt_woman"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/sex_selector"
+            android:text="女"
+            android:textColor="@color/blok"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/bt_man"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_above="@id/bt_woman"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/sex_selector"
+            android:text="男"
+            android:textColor="@color/blok"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/bt_msg"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_above="@id/bt_man"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/map_need_style"
+            android:gravity="center"
+            android:text="性别一经选定不可更改！"
+            android:textColor="@color/blok"
+            android:textSize="12dp"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="timestamp"
+        android:textColor="#737373"
+        android:visibility="gone"
+        android:textSize="10sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:id="@+id/iv_userhead"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x_10"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/x_10"
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:text="name"
+            android:visibility="visible"
+            android:textColor="#ff99cc"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:layout_below="@id/txt_name"
+            >
+
+            <TextView
+                android:text="content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="6dp"
+                android:paddingLeft="6dp"
+                android:id="@+id/tv_chatcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:background="@drawable/baping_edit"
+                android:gravity="left|center"
+                android:lineSpacingExtra="2dp"
+                android:maxWidth="215dp"
+                android:textColor="@color/set_item"
+                android:textSize="14dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/msg_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/msg_state_failed_resend"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pb_sending"
+                android:layout_gravity="center_vertical"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_toLeftOf="@id/tv_chatcontent"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rl_tongzhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/buttonstyle_black"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_tongzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buttonstyle_black"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="撤回了一条消息"
+                android:paddingTop="5dp"
+                android:textColor="#A6A6A6"
+                android:textSize="12dp"/>
+
+            <LinearLayout
+                android:layout_below="@id/tv_tongzhi"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ll_jietouanyu"
+                android:layout_width="200dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                >
+
+                <TextView
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="快用它寻找你的缘分吧"
+                    android:background="@drawable/top_round"
+                    android:textColor="#ffffff"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/jietouanyu"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="接头暗语"
+                    android:background="@drawable/bottom_round"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_toRightOf="@id/iv_userhead"
+            android:id="@+id/bataijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_chat_activity">
+
+            <TextView
+                android:id="@+id/invation_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/set_item"
+                android:textSize="14dp"
+                android:text="发送了吧台见邀请"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:layout_marginBottom="5dp"
+                android:id="@+id/invation_receive"
+                android:layout_width="210dp"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/top_round">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/bataicup"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:text="吧台见"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/invation_receive_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:background="@drawable/bottom_round"
+                    android:text="同意"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/batai_tongzhi"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="130dp"
+            android:layout_height="34dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/round_yellow_bg">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/bataicup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="吧台见"
+                android:textSize="15sp"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

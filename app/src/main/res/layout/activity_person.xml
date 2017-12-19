@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context="com.yeying.aimi.mode.person.PersonActivity">
+
+    <include
+        layout="@layout/layout_titlestyle_1"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set_item"
+        android:paddingBottom="@dimen/x_10"
+        android:paddingRight="@dimen/x_16"
+        android:paddingTop="@dimen/x_10">
+
+        <TextView
+            style="@style/Set_item_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="头像"/>
+
+        <ImageView
+            android:id="@+id/right_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_white"/>
+
+        <com.yeying.aimi.views.RoundImageView
+            android:id="@+id/img_head"
+            android:layout_width="@dimen/x_65"
+            android:layout_height="@dimen/x_65"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x_20"
+            android:layout_toLeftOf="@+id/right_view"
+            android:src="@drawable/img_default"
+            app:type="circle"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_16"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set_item"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/set_item">
+
+            <TextView
+
+                style="@style/Set_item_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"/>
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                style="@style/Set_item_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/right_white"
+                android:maxLength="12"
+                android:maxLines="1"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x_1"
+            android:layout_marginLeft="@dimen/x_16"
+            android:layout_marginRight="@dimen/x_16"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/set_item">
+
+            <TextView
+                style="@style/Set_item_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别"/>
+
+            <TextView
+                android:id="@+id/tv_sex"
+                style="@style/Set_item_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set_item"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/set_item">
+
+            <TextView
+                style="@style/Set_item_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生日"/>
+
+            <TextView
+                android:id="@+id/tv_birth"
+                style="@style/Set_item_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/right_white"
+                android:maxLength="11"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x_1"
+            android:layout_marginLeft="@dimen/x_16"
+            android:layout_marginRight="@dimen/x_16"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_constellation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/set_item">
+
+            <TextView
+                style="@style/Set_item_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星座"/>
+
+            <TextView
+                android:id="@+id/tv_constellation"
+                style="@style/Set_item_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:maxLength="3"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_16"/>
+
+    <LinearLayout
+        android:id="@+id/layout_explain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set_item">
+
+        <TextView
+            style="@style/Set_item_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="个人简介"/>
+
+        <TextView
+            android:gravity="right|center"
+            android:id="@+id/tv_explain"
+            style="@style/Set_item_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1.8"
+            android:drawableRight="@drawable/right_white"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/default_dis"
+            android:textSize="@dimen/sp_15"/>
+    </LinearLayout>
+
+</LinearLayout>

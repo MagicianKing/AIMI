@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/black"/>
+
+    <include layout="@layout/appbar_layout"></include>
+
+    <ScrollView
+        android:overScrollMode="never"
+        android:background="@color/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="41dp">
+
+            <ImageView
+                android:id="@+id/im_logo"
+                android:layout_width="93dp"
+                android:layout_height="93dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/im_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="OWL"
+                android:textColor="@color/hall_yellow_light"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/hall_yellow_dark"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_version"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/hall_yellow_dark"
+                android:textSize="16dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_business"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:layout_below="@id/tv_desc"
+                android:layout_marginTop="30dp"
+                android:background="@color/trans_yellow">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="商务与加盟我们"
+                    android:textColor="@color/hall_yellow_dark"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_phone"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_below="@id/rl_business">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="咨询电话："
+                        android:textColor="@color/hall_yellow_dark"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/hall_yellow_dark"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_email"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_below="@id/rl_phone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="咨询邮箱："
+                        android:textColor="@color/hall_yellow_dark"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text=""
+                        android:textColor="@color/hall_yellow_dark"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/rl_email"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginBottom="100dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="咨询QQ："
+                        android:textColor="@color/hall_yellow_dark"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_lineqq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/hall_yellow_dark"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/rl_email"/>
+
+            <RelativeLayout
+                android:layout_width="218dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/bt_shengming"
+                    android:layout_width="104dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/darkyellow_boder"
+                    android:text="免责声明"
+                    android:textColor="@color/the_dark_yellow"/>
+
+                <Button
+                    android:id="@+id/bt_tiaokuan"
+                    android:layout_width="104dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/darkyellow_boder"
+                    android:text="隐私条款"
+                    android:textColor="@color/the_dark_yellow"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

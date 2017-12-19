@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yeying.aimi.games.GameStartActivity">
+
+    <ImageView
+        android:id="@+id/game_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/start_bg"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/x_25"
+        android:id="@+id/layout_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/title_left"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/title_left_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="游戏介绍"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:textColor="#ffe400"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_topbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="跑得快"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="摇的越快 跑得越快"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/imgbtn_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:paddingTop="90dp"
+        android:src="@drawable/img_gamestop"/>
+
+    <TextView
+        android:id="@+id/gamestart_reday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/x_50"
+        android:text="入场准备"
+        android:textColor="@color/yellow_light"/>
+
+    <FrameLayout
+        android:id="@+id/gamestart_mengceng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:visibility="gone"
+        android:background="@android:color/black"/>
+</RelativeLayout>

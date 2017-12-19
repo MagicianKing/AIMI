@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="132dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_zhuanfa"
+            android:layout_width="64dp"
+            android:layout_height="38dp"
+            android:background="@drawable/menu_left"
+            android:clickable="true"
+            android:onClick="forward">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="转发"
+                android:textColor="@color/menu_white"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0.8dp"
+            android:layout_height="38dp"
+            android:background="@color/menu_white"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_del"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:background="@drawable/menu_right"
+            android:clickable="true"
+            android:onClick="delete">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="删除"
+                android:textColor="@color/menu_white"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0.8dp"
+            android:layout_height="38dp"
+            android:background="@color/menu_white"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_back_del"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:background="@drawable/menu_right"
+            android:clickable="true"
+            android:onClick="back_del"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="撤回"
+                android:textColor="@color/menu_white"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
